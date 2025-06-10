@@ -1,9 +1,23 @@
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
+print("Welcome to Python Pizza Deliveries")
+size = input("What size pizza do you want? S, M or L:")
+pepperoni =  input("Do you want pepperoni on your pizza? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
 
-if height >= 120:
-    print("You can ride the rollercoaster")
+bill = 0
+if size == 'S':
+    bill = bill + 15
+elif size == 'M':
+    bill = bill + 20
 else:
-    print("Sorry you have to grow taller before you can ride.")
+    bill = bill +25
 
-#modulo
+if pepperoni == 'Y' and size == 'S':
+    bill = bill + 2
+else:
+    bill = bill +3
+
+if extra_cheese == 'Y':
+    bill = bill+1
+else:
+    bill = bill+0
+print (f"Your total bill is s {bill}")
